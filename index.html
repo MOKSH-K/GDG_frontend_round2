@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevBoard | Discover Tech Events</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <div class="logo">
+                <span class="logo-icon">◆</span>
+                DevBoard
+            </div>
+
+            <div class="nav-links" id="navLinks">
+
+                <a href="#discover">
+                    Discover
+                </a>
+
+                <a href="#trending">
+                    Trending
+                </a>
+
+                <a href="#saved">
+                    Saved
+                    <span class="saved-count" id="savedCount">0</span>
+                </a>
+
+            </div>
+
+            <div class="nav-actions">
+
+                <button
+                    class="theme-btn"
+                    id="themeToggle"
+                    aria-label="Toggle dark mode"
+                >
+                    ☾
+                </button>
+
+                <button
+                    class="menu-btn"
+                    id="menuBtn"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="hero-container">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    🚀 YOUR TECH OPPORTUNITIES
+                </span>
+
+                <h1>
+                    Discover what's
+                    <span>next.</span>
+                </h1>
+
+                <p>
+                    Find hackathons, workshops, tech events and
+                    opportunities that help you learn, build and grow.
+                </p>
+
+                <a href="#discover" class="hero-btn">
+                    Explore Events →
+                </a>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="floating-card card-one">
+
+                    <span>💻</span>
+
+                    <div>
+                        <strong>Hackathon</strong>
+                        <small>Build something amazing</small>
+                    </div>
+
+                </div>
+
+
+                <div class="floating-card card-two">
+
+                    <span>🤖</span>
+
+                    <div>
+                        <strong>AI Workshop</strong>
+                        <small>Learn Generative AI</small>
+                    </div>
+
+                </div>
+
+
+                <div class="floating-card card-three">
+
+                    <span>🏆</span>
+
+                    <div>
+                        <strong>Tech Event</strong>
+                        <small>Meet developers</small>
+                    </div>
+
+                </div>
+
+
+                <div class="hero-circle">
+
+                    <span>DEV</span>
+                    <strong>BOARD</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-stats">
+
+            <div>
+
+                <strong id="totalEvents">
+                    0
+                </strong>
+
+                <span>
+                    Events
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    6+
+                </strong>
+
+                <span>
+                    Categories
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    100%
+                </strong>
+
+                <span>
+                    Student Focused
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <main class="main-container">
+
+
+        <section
+            id="trending"
+            class="trending-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        POPULAR RIGHT NOW
+                    </span>
+
+                    <h2>
+                        🔥 Trending Events
+                    </h2>
+
+                    <p>
+                        Events getting the most attention from students.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="trendingGrid"
+                class="events-grid"
+            ></div>
+
+        </section>
+
+
+
+        <section
+            id="discover"
+            class="events-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        DISCOVER
+                    </span>
+
+                    <h2>
+                        Upcoming Events
+                    </h2>
+
+                    <p>
+                        Explore opportunities and find your next
+                        learning experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="filter-container">
+
+                <div class="search-box">
+
+                    <span>
+                        ⌕
+                    </span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search events..."
+                        aria-label="Search events"
+                    >
+
+                </div>
+
+
+                <select id="categoryFilter">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="Web Development">
+                        Web Development
+                    </option>
+
+                    <option value="AI/ML">
+                        AI / ML
+                    </option>
+
+                    <option value="Cybersecurity">
+                        Cybersecurity
+                    </option>
+
+                    <option value="Blockchain">
+                        Blockchain
+                    </option>
+
+                    <option value="Cloud">
+                        Cloud
+                    </option>
+
+                    <option value="Hackathon">
+                        Hackathon
+                    </option>
+
+                </select>
+
+
+                <select id="sortFilter">
+
+                    <option value="default">
+                        Sort By
+                    </option>
+
+                    <option value="date">
+                        Date
+                    </option>
+
+                    <option value="category">
+                        Category
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div
+                id="loadingState"
+                class="state-container"
+            >
+
+                <div class="loader"></div>
+
+                <p>
+                    Loading events...
+                </p>
+
+            </div>
+
+
+            <div
+                id="eventsGrid"
+                class="events-grid"
+            ></div>
+
+
+            <div
+                id="noResults"
+                class="state-container hidden"
+            >
+
+                <div class="state-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    No events found
+                </h3>
+
+                <p>
+                    Try changing your search or category filter.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section
+            id="saved"
+            class="saved-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        YOUR COLLECTION
+                    </span>
+
+                    <h2>
+                        Saved Events
+                    </h2>
+
+                    <p>
+                        Keep track of events you don't want to miss.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="savedGrid"
+                class="events-grid"
+            ></div>
+
+
+            <div
+                id="emptySaved"
+                class="state-container"
+            >
+
+                <div class="state-icon">
+                    ♡
+                </div>
+
+                <h3>
+                    No saved events yet
+                </h3>
+
+                <p>
+                    Save events you are interested in and they will
+                    appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div
+        class="modal-overlay hidden"
+        id="eventModal"
+    >
+
+        <div class="modal">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                aria-label="Close event details"
+            >
+                ×
+            </button>
+
+            <div
+                id="modalContent"
+                class="modal-content"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="logo">
+
+                <span class="logo-icon">
+                    ◆
+                </span>
+
+                DevBoard
+
+            </div>
+
+            <p>
+                Built for students who love to build!
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
