@@ -18,8 +18,6 @@ A student-focused web application for discovering upcoming tech events, workshop
 
 This project follows the **Frontend Development Round 2** assignment brief.
 
-> 🚧 **Status:** Initial setup. The current project contains the starter screen; the features below are planned requirements, not completed functionality.
-
 ## 🎯 Planned Features
 
 - 📅 **Event Discovery** — Browse upcoming tech events, workshops, and hackathons.
