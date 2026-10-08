@@ -57,9 +57,9 @@ As development progresses, event browsing, filters, event details, and favourite
 
 ## 🌐 Deployment
 
-Deployment is required by the assignment and is **not completed yet**.
+Deployment is required by the assignment and is .
 
-**Live application:** `YOUR_DEPLOYED_APP_URL`
+**Live application:** `https://gdgfrontendround2.vercel.app/`
 
 ## 🎥 Video Walkthrough
 
