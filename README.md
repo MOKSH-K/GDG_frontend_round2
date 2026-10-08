@@ -6,7 +6,7 @@
 
 A student-focused web application for discovering upcoming tech events, workshops, and hackathons.
 
-[🌐 Live Demo](https://gdgfrontendround2.vercel.app/) · [🎥 Video Walkthrough](YOUR_VIDEO_URL) · [📂 Repository]([YOUR_GITHUB_REPOSITORY_URL](https://github.com/MOKSH-K/GDG_frontend_round2.git))
+[🌐 Live Demo](https://gdgfrontendround2.vercel.app/) · [🎥 Video Walkthrough](YOUR_VIDEO_URL) · [📂 Repository]((https://github.com/MOKSH-K/GDG_frontend_round2.git))
 
 </div>
 
