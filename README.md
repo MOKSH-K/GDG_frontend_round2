@@ -30,11 +30,11 @@ This project follows the **Frontend Development Round 2** assignment brief.
 
 ### ✨ Optional Enhancements
 
-- Sort events by date or category.
-- Add a dedicated favourites page or section.
-- Improve accessibility and keyboard navigation.
-- Add subtle transitions and animations.
-- Introduce theme switching.
+- Sorted events by date or category.
+- Added a dedicated favourites page or section.
+- Improved accessibility and keyboard navigation.
+- Added subtle transitions and animations.
+- Introduced theme switching(normal to dark).
 
 ## 🛠️ Technology Stack
 |HTML| CSS| JAVASCRIPT|
